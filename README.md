@@ -25,7 +25,7 @@ The data is gathered by web scraping SkySports website. E.g. https://www.skyspor
 
 As an input given as an argument, it is allowed to select:
   * -d/--days: How many days in the future to look for fixtures. Default: 4.
-  * -c/--confidence: What is the confidence threshold that the user wants output. Default: 0, i.e. all fixtures momentum's scores are shown.
+  * -c/--confidence: What is the confidence threshold that the user wants output. Default: 0, i.e. no filter in place.
 
 ## Install
 
