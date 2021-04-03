@@ -80,7 +80,12 @@ python honers.py
 
 ### Momentum
 
+![momentum](https://user-images.githubusercontent.com/25267873/113485974-494afd80-94a8-11eb-8fa7-44ef9ddb7e65.jpg)
+
+
 ### Confidence
+
+![confidence](https://user-images.githubusercontent.com/25267873/113485973-4819d080-94a8-11eb-920f-ed78733d24b6.jpg)
 
 ## Example
 
