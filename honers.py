@@ -83,7 +83,7 @@ def main(args):
         action="store",
         dest="days_ahead",
         type=check_days_ahead,
-        default=3,
+        default=4,
         help="Number of days ahead to get fixtures from.",
     )
     parser.add_argument(
@@ -104,9 +104,9 @@ def main(args):
     max_days_to_look = ns_parser.days_ahead
     filter_confidence = ns_parser.confidence_threshold
     l_competitions = [("PREMIER LEAGUE", "https://www.skysports.com/premier-league-fixtures"),
-                    ("CHAMPIONSHIP", "https://www.skysports.com/championship-fixtures"),
-                    ("LEAGUE ONE", "https://www.skysports.com/league-1-fixtures"),
-                    ("LEAGUE TWO", "https://www.skysports.com/league-2-fixtures"),]
+                      ("CHAMPIONSHIP", "https://www.skysports.com/championship-fixtures"),
+                      ("LEAGUE ONE", "https://www.skysports.com/league-1-fixtures"),
+                      ("LEAGUE TWO", "https://www.skysports.com/league-2-fixtures"),]
 
     print("")
     if emojis:
@@ -233,6 +233,8 @@ def main(args):
 
             if days_till_feature > max_days_to_look:
                 break
+
+    input("No more games found!")
 
 if __name__ == '__main__':
     main(sys.argv[1:])
