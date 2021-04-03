@@ -5,7 +5,8 @@ import re
 import re
 import datetime
 import time
-from colorama import Fore, Style
+from colorama import Fore, Style, init
+init(convert=True)
 import argparse
 import sys
 
