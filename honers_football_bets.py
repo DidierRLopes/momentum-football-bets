@@ -119,7 +119,7 @@ def main(args):
     dt_game = datetime.datetime.strptime("01 January 2000", "%d %B %Y")
 
     for competition,url_fixture in l_competitions:
-        print(f"⚽️⚽️⚽️ {competition} ⚽️⚽️⚽️\n")
+        print(f"💎💎💎 {competition} 💎💎💎\n")
 
         text_fixtures = BeautifulSoup(requests.get(url_fixture).text, "lxml")
         time.sleep(.2)
@@ -146,7 +146,7 @@ def main(args):
                     #print(f"Days until feature: {days_till_feature}")
 
                     if datetime.datetime.strptime(date, "%d %B %Y") > dt_game:
-                        print(f"⚽️⚽️⚽️ {date}\n")
+                        print(f"✨✨✨ {date} ✨✨✨\n")
 
                     dt_game = datetime.datetime.strptime(date, "%d %B %Y")
 
