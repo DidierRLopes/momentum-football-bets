@@ -100,6 +100,7 @@ def main(args):
     if l_unknown_args:
         print(f"The following args couldn't be interpreted: {l_unknown_args}")
 
+    emojis = False
     max_days_to_look = ns_parser.days_ahead
     filter_confidence = ns_parser.confidence_threshold
     l_competitions = [("PREMIER LEAGUE", "https://www.skysports.com/premier-league-fixtures"),
@@ -108,7 +109,10 @@ def main(args):
                     ("LEAGUE TWO", "https://www.skysports.com/league-2-fixtures"),]
 
     print("")
-    print("⚽️ ⚽️ ⚽️ ⚽️ ⚽️ WELCOME TO HONER'S FOOTBALL BETS ⚽️ ⚽️ ⚽️ ⚽️ ⚽️\n")
+    if emojis:
+        print("⚽️ ⚽️ ⚽️ ⚽️ ⚽️ WELCOME TO HONER'S MOMENTUM FOOTBALL BETS ⚽️ ⚽️ ⚽️ ⚽️ ⚽️\n")
+    else:
+        print("O O O O O O O O O O O O O O O   WELCOME TO HONER'S MOMENTUM FOOTBALL BETS   O O O O O O O O O O O O O O O\n")
     print("Configuration")
     print(f"   Days to look for fixtures: {max_days_to_look} ")
     print(f"   Confidence threshold filter: {filter_confidence} ")
@@ -120,7 +124,10 @@ def main(args):
     dt_game = datetime.datetime.strptime("01 January 2000", "%d %B %Y")
 
     for competition,url_fixture in l_competitions:
-        print(f"💎💎💎 {competition} 💎💎💎\n")
+        if emojis:
+            print(f"💎💎💎 {competition} 💎💎💎\n")
+        else:
+            print(f"------------------------------------------     {competition}     ------------------------------------------\n")
 
         text_fixtures = BeautifulSoup(requests.get(url_fixture).text, "lxml")
         time.sleep(.2)
@@ -147,7 +154,10 @@ def main(args):
                     #print(f"Days until feature: {days_till_feature}")
 
                     if datetime.datetime.strptime(date, "%d %B %Y") > dt_game:
-                        print(f"✨✨✨ {date} ✨✨✨\n")
+                        if emojis:
+                            print(f"✨✨✨ {date} ✨✨✨\n")
+                        else:
+                            print(f"...........................................     {date}     ...........................................\n")
 
                     dt_game = datetime.datetime.strptime(date, "%d %B %Y")
 
