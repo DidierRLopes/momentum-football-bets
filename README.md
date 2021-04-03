@@ -10,7 +10,7 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#install">Install</a></li>
-    <a href="#concept">Concept</a>
+    <li><a href="#concept">Concept</a></li>
     <li><a href="#example">Example</a> </li>
     <li><a href="#license">License</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
@@ -19,7 +19,13 @@
 
 ## About The Project
 
-The goal of this project is to try and estimate each team's momentum based on their near future fixtures. This is based on the stats of the last 6 results of each of the teams. The aim is to improve your football acca's odds. 
+The aim of this project is to try and estimate each team's momentum based on their near future fixtures. This is based on the stats of the last 6 results of each of the teams. Then, it attempts to estimate the risk of a bet by calculating the momentum gap between both teams. The end goal is to improve your football acca's odds. 
+
+The data is gathered by web scraping SkySports website. E.g. https://www.skysports.com/premier-league-fixtures for fixtures, and https://www.skysports.com/football/wolverhampton-wanderers-vs-liverpool/stats/429116 for fixture stats (where is possible to find last 6 match results).
+
+As an input given as an argument, it is allowed to select:
+  * -d/--days: How many days in the future to look for fixtures. Default: 4.
+  * -c/--confidence: What is the confidence threshold that the user wants output. Default: 0, i.e. all fixtures momentum's scores are shown.
 
 ## Install
 
@@ -110,3 +116,5 @@ Internally, the program's bet confidence is splitted across the following bins/d
 ## License
 
 ## Disclaimer
+
+I'm NO Bets advisor. This was made for fun, and to automate a due diligence boring task.
