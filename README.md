@@ -28,6 +28,52 @@
 
 ## Install
 
+This project was originally written and tested with Python 3.6.8.
+
+1. Install Anaconda
+
+The recommendation is to use this project with Anaconda's Python distribution - either full [__Anaconda3 Latest__](https://repo.anaconda.com/archive/) or [__Miniconda3 Latest__](https://repo.anaconda.com/archive/).
+
+Confirm that you have it with: `conda -V`. The output should be something along the lines of: `conda 4.9.2`
+
+2. Create Environment
+
+You can name the environment whatever you want, e.g.: `bets`.
+```
+conda create -n bets python=3.6.8
+````
+
+3. Activate the virtual environment
+```
+conda activate bets
+```
+Note: At the end, you can deactivate it with: `conda deactivate`
+
+4. Fork the Project
+
+- Via HTTPS: `https://github.com/DidierRLopes/momentum-football-bets.git`
+- via SSH:  `git@github.com:DidierRLopes/momentum-football-bets.git`
+
+Navigate into the folder with: `cd momentum-football-bets/`
+
+5. Install poetry
+```
+conda install poetry
+```
+
+6. Install poetry dependencies
+```
+poetry install
+```
+This is a library for package management, and ensures a smoother experience than: ``pip install -r requirements.txt``. Although the later should also work just fine.
+
+7.  You're ready to Bet!
+
+```
+python honers.py
+```
+
+
 ## Concept
 
 ### Score
