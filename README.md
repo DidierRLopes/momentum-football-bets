@@ -115,6 +115,8 @@ Internally, the program's bet confidence is splitted across the following bins/d
 
 ## License
 
+Distributed under the MIT License. See [LICENSE](https://github.com/DidierRLopes/momentum-football-bets/blob/main/LICENSE) for more information.
+
 ## Disclaimer
 
 I'm NO Bets advisor. This was made for fun, and to automate a due diligence boring task.
