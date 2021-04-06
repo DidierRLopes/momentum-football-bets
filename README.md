@@ -14,6 +14,7 @@
     <li><a href="#example">Example</a> </li>
     <li><a href="#license">License</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
+    <li><a href="#future-improvements">Future Improvements</a></li>
   </ol>
 </details>
 
@@ -113,6 +114,8 @@ Internally, the program's bet confidence is splitted across the following bins/d
 
 <img width="706" alt="example" src="https://user-images.githubusercontent.com/25267873/113477261-88f9f100-9478-11eb-9cb0-74936de34078.png">
 
+This is the perfect example of how this algorithm still needs tuning and will not guess the outcome of a game, since Chelsea lost 5-2. And that's the reason why we like football. 
+
 ## License
 
 Distributed under the MIT License. See [LICENSE](https://github.com/DidierRLopes/momentum-football-bets/blob/main/LICENSE) for more information.
@@ -120,3 +123,9 @@ Distributed under the MIT License. See [LICENSE](https://github.com/DidierRLopes
 ## Disclaimer
 
 I'm NO Bets advisor. This was made for fun, and to automate a due diligence boring task.
+
+## Future Improvements
+
+* Improve scoring algorithm weights
+* Consider ranking of opponent team in last results
+* Consider competition in last results (e.g. champions league more weight than premier league)
