@@ -20,13 +20,13 @@
 
 ## About The Project
 
-The aim of this project is to try and estimate each team's momentum based on their near future fixtures. This is based on the stats of the last 6 results of each of the teams. Then, it attempts to estimate the risk of a bet by calculating the momentum gap between both teams. The end goal is to improve your football acca's odds. 
+The aim of this project is to try and estimate each team's momentum based on their near future fixtures. This is based on the stats of the last 6 results from each team. Then, it attempts to estimate the risk of a bet by calculating the momentum gap between both teams. The end goal is to improve your football acca odds. 
 
-The data is gathered by web scraping SkySports website. E.g. https://www.skysports.com/premier-league-fixtures for fixtures, and https://www.skysports.com/football/wolverhampton-wanderers-vs-liverpool/stats/429116 for fixture stats (where is possible to find last 6 match results).
+The data is gathered by web scraping SkySports website. E.g. https://www.skysports.com/premier-league-fixtures for fixtures, and https://www.skysports.com/football/wolverhampton-wanderers-vs-liverpool/stats/429116 for fixture stats (where it's possible to find last 6 match results).
 
-As an input given as an argument, it is allowed to select:
+As an input given as an argument, it's allowed to select:
   * -d/--days: How many days in the future to look for fixtures. Default: 4.
-  * -c/--confidence: What is the confidence threshold that the user wants output. Default: 0, i.e. no filter in place.
+  * -c/--confidence: What is the confidence threshold that the user wants to output. Default: 0, i.e. no filter in place.
 
 ## Install
 
@@ -78,19 +78,19 @@ python honers.py
 
 ## Concept
 
-Firstly, we attribute 6 points to last result of a team, 5 points to the previous to that one, and so on. 
+Firstly, we attribute 6 points to last result of a team, 5 points to the second most recent match, and so on. 
 
-Secondly, based on the outcome of the results, the points will be either positive (+1) in case of a winning, negative (-1) in case of a loss, and 0 otherwise (i.e. draw).
+Secondly, based on the outcome of the results, the points will be either positive (+1) if the team wins, negative (-1) if it's a loss, and 0 otherwise (i.e. draw).
 
 **Momentum Score**
 
-The momentum score is then achieved using these combination between last 6 games and their outcomes.
+The momentum score is then achieved using the combinations of the last 6 games and their outcomes.
 
 E.g. If Liverpool last match results were: WIN, WIN, WIN, DRAW, LOSE, DRAW, from more recent to older. 
 
 Liverpool's momentum score would be: (6 x (+1)) + (5 x (+1)) + (4 x (+1)) + (3 x (0)) + (2 x (-1)) + (1 x (0)) = 13
 
-Internally, the program's momentum score is splitted across the following bins/descriptions, with min and MAX being -21 and +21, respectively.
+Internally, the program's momentum score is split across the following bins/descriptions, with min and MAX being -21 and +21, respectively.
 
 
 ![momentum](https://user-images.githubusercontent.com/25267873/113485974-494afd80-94a8-11eb-8fa7-44ef9ddb7e65.jpg)
@@ -98,15 +98,15 @@ Internally, the program's momentum score is splitted across the following bins/d
 
 **Bet Confidence**
 
-Since the momentum of a team only shows one side of the story, you need to compare the momentum of the teams that are playing each other in order to estimate if your bet is risky/safe.
+Since the momentum of a team only shows one side of the story, you need to compare the momentum of the teams that are playing each other in order to estimate if your bet is risky or safe.
 
 E.g. If Liverpool is having an Excellent momentum of 6 wins in a row, and so is Manchester United, this is considered a risky bet. 
 
-However, if Liverpool has draw all their previous match, and therefore have a momentum of 0, BUT United has loss all the previous 6 matches, (i.e. momentum of -21), this may be worth a bet due to the disgusting momentum of United.
+However, if Liverpool has drawed in all of their previous matches, and therefore have a momentum of 0, BUT United has lost all of their previous 6 matches, (i.e. momentum of -21), this may be worth a bet due to the disgusting momentum of United.
 
 Hence, the Bet Confidence is estimated from the difference between the momentum score of both teams. The bigger the gap score, the less risky will the app be. 
 
-Internally, the program's bet confidence is splitted across the following bins/descriptions, with min and MAX being 0 and +42, respectively.
+Internally, the programme's bet confidence is split across the following bins/descriptions, with min and MAX being 0 and +42, respectively.
 
 ![confidence](https://user-images.githubusercontent.com/25267873/113485973-4819d080-94a8-11eb-920f-ed78733d24b6.jpg)
 
