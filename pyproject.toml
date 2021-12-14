@@ -9,7 +9,7 @@ python = "^3.6"
 bs4 = "^0.0.1"
 prettytable = "^2.1.0"
 colorama = "^0.4.4"
-lxml = "^4.6.3"
+lxml = "^4.6.5"
 
 [tool.poetry.dev-dependencies]
 
